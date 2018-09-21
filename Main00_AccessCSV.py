@@ -7,6 +7,8 @@ import numpy
 import csv
 import pickle
 
+# How to push in the Github
+
 FileDirectoryPath = 'H:/netData/DynamicModel/jrvicon'
 # files=[]
 
