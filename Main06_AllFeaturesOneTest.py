@@ -117,3 +117,16 @@ print('New Data file name is {}'.format(savefilename))
 with open(SaveFolder, 'wb') as f:
     # Pickle the dictionary using the highest protocol available
     pickle.dump(testData, f, pickle.HIGHEST_PROTOCOL)
+
+# Compare with each other
+PreCtrRa2MeasCtrRa_fig, PreCtrRa2MeasCtrRa_ax = plt.subplots()
+# p_fig, p_ax = plt.subplots()
+PreCtrRa2MeasCtrRa_ax.plot(time, testToProcess.get('PrescribeCtrRa')[400: -400], '.b')
+PreCtrRa2MeasCtrRa_ax.plot(time, testToProcess.get('CRatio')[400: -400], '.r')
+
+PreCtrRa2MeasCtrRa_ax.legend(['PrescribeCtrRa', 'CRatio'])
+title = 'PrescribeCtrRa' + TestSetting + timestamp
+PreCtrRa2MeasCtrRa_ax.set_title(title)
+PreCtrRa2MeasCtrRa_ax.set_ylabel('Ratio($\Lambda_1$)')
+PreCtrRa2MeasCtrRa_ax.set_xlabel('Time (Sec)')
+PreCtrRa2MeasCtrRa_fig.savefig(title + ".png")

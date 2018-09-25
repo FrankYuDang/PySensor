@@ -79,7 +79,7 @@ P2CRatio_ax.plot(testToProcess3.get('pressure'), func_P2CR(testToProcess3.get('p
 P2CRatio_ax.legend(['test1 data', 'test2 data','test3 data', 'Prediction'])
 title = 'Pressure vs CtrRatio'
 P2CRatio_ax.set_title(title)
-P2CRatio_fig.savefig(title + TestSetting +  ".png")
+P2CRatio_fig.savefig(title + 'TestSetting' +  ".png")
 P2CRatio_fig.show()
 
 # title = 't2R' + TestSetting
